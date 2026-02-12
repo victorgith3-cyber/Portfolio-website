@@ -584,6 +584,171 @@
                 font-size: 1.8rem;
             }
         }
+             .tagline {
+            color: #64748b;
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+        
+        .pricing-section-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 10px;
+        }
+        
+        .pricing-section-subtitle {
+            color: #64748b;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        .pricing-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            padding: 40px 30px;
+            flex: 1;
+            min-width: 280px;
+            max-width: 350px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pricing-card.featured {
+            border-top: 5px solid #3b82f6;
+            position: relative;
+        }
+        
+        .featured-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #3b82f6;
+            color: white;
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .plan-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 15px;
+        }
+        
+        .price-range {
+            font-size: 36px;
+            font-weight: 800;
+            color: #1e40af;
+            margin-bottom: 20px;
+        }
+        
+        .price-note {
+            font-size: 16px;
+            color: #64748b;
+            margin-bottom: 25px;
+        }
+        
+        .features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #f1f5f9;
+            display: flex;
+            align-items: center;
+        }
+        
+        .features li:last-child {
+            border-bottom: none;
+        }
+        
+        .features li i {
+            color: #10b981;
+            margin-right: 12px;
+            font-size: 18px;
+        }
+        
+        .maintenance-note {
+            text-align: center;
+            background: #f1f5f9;
+            padding: 25px;
+            border-radius: 12px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            border-left: 5px solid #3b82f6;
+        }
+        
+        .maintenance-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+        
+        .maintenance-text {
+            color: #475569;
+            font-size: 16px;
+        }
+        
+        .footer-note {
+            text-align: center;
+            color: #64748b;
+            font-size: 15px;
+            font-style: italic;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 992px) {
+            .pricing-container {
+                gap: 20px;
+            }
+            
+            .pricing-card {
+                min-width: 100%;
+                max-width: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .pricing-section-title {
+                font-size: 30px;
+            }
+            
+            .price-range {
+                font-size: 32px;
+            }
+            
+            .pricing-card {
+                padding: 30px 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .pricing-section-title {
+                font-size: 26px;
+            }
+                    }
 
         /* Scroll to top button */
         .scroll-top {
@@ -614,5 +779,4 @@
         .scroll-top:hover {
             background-color: var(--primary-dark);
             transform: translateY(-5px);
-        }
-    
+        }     

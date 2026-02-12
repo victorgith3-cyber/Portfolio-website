@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<meta http-equiv="refresh" content="10">-->
-    <!-- Refreshes the page every 10 seconds-->
+
     <title>Victor Kimani | Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,7 +36,7 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>Hi, I'm <span>Victor Kimani</span><br>Web Developer</h1>
-                    <p>I create beautiful, functional websites and web applications with clean code and modern technologies. Passionate about UX/UI design and responsive web development.</p>
+                    <p>I create beautiful, functional websites and web applications with clean code and modern technologies. Passionate about UX/UI design,responsive web development and full-stack development.</p>
                     <div class="cta-buttons">
                         <a href="#projects" class="btn">View My Work</a>
                         <a href="#contact" class="btn btn-outline">Contact Me</a>
@@ -49,7 +48,7 @@
             </div>
         </div>
     </section>
-
+ 
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
@@ -61,6 +60,7 @@
                     <P>Building on a solid foundation as a Certified IT Technician, I possess a deep understanding of systems and problem-solving.</P>
                     <P>Currently, I specialize in frontend development, crafting responsive and intuitive user interfaces.</P>
                     <p>My approach combines technical expertise with a keen eye for design, ensuring that every project not only functions flawlessly but also provides an exceptional user experience.</p>
+                    <p>Driven by a love for creating solutions that are both beautiful and functional.</p>
                     <P>I am now actively expanding my expertise into backend technologies, driven by a passion to bridge the gap between user experience and system architecture as a versatile full-stack developer.</P>
                     <p>When I'm not coding, you can find me exploring new technologies, writing poetry, playing Chess, contributing to open-source projects, or hiking in the mountains to clear my mind and find inspiration.</p>
                     <a href="#contact" class="btn">Get In Touch</a>
@@ -117,6 +117,69 @@
                 <div class="project-card">  
                   <a href ="https://bio-page-chi.vercel.app/" class ="btn btn-outline">view project</a>
             </div>
+        </div>
+    </section>
+    <!--Prices Section-->
+    <section id="prices" class="prices">
+        <div class="container">
+            <div class="tagline">Professional Web Development Services</div>
+            <h1 class="pricing-section-title">Sample Pricing (USD)</h1>
+            <p class="pricing-section-subtitle">Choose the plan that fits your business needs</p>
+        </div>
+        
+        <div class="pricing-container">
+            <!-- Landing Page Card -->
+            <div class="pricing-card">
+                <h2 class="plan-title">Landing Page</h2>
+                <div class="price-range">$50 – $70</div>
+                <p class="price-note">Single-page website with basic SEO</p>
+                <ul class="features">
+                    <li><i class="fas fa-check"></i> Single-page site</li>
+                    <li><i class="fas fa-check"></i> Fast delivery (3-5 days)</li>
+                    <li><i class="fas fa-check"></i> Basic SEO optimization</li>
+                    <li><i class="fas fa-check"></i> Mobile responsive design</li>
+                    <li><i class="fas fa-check"></i> Contact form integration</li>
+                </ul>
+            </div>
+            
+            <!-- Business Website Card -->
+            <div class="pricing-card featured">
+                <div class="featured-badge">Most Popular</div>
+                <h2 class="plan-title">Business Website</h2>
+                <div class="price-range">$200 – $350</div>
+                <p class="price-note">Multi-page professional website</p>
+                <ul class="features">
+                    <li><i class="fas fa-check"></i> 4+ pages</li>
+                    <li><i class="fas fa-check"></i> Responsive design</li>
+                    <li><i class="fas fa-check"></i> SEO setup</li>
+                    <li><i class="fas fa-check"></i> Content management system</li>
+                    <li><i class="fas fa-check"></i> Social media integration</li>
+                    <li><i class="fas fa-check"></i> Analytics setup</li>
+                </ul>
+            </div>
+            
+            <!-- Full E-Commerce Card -->
+            <div class="pricing-card">
+                <h2 class="plan-title">Full E-Commerce</h2>
+                <div class="price-range">$400 – $600</div>
+                <p class="price-note">Complete online store solution</p>
+                <ul class="features">
+                    <li><i class="fas fa-check"></i> WooCommerce store</li>
+                    <li><i class="fas fa-check"></i> Payment integration</li>
+                    <li><i class="fas fa-check"></i> Training & handover</li>
+                    <li><i class="fas fa-check"></i> Product management</li>
+                    <li><i class="fas fa-check"></i> Secure checkout</li>
+                    <li><i class="fas fa-check"></i> Inventory management</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="maintenance-note">
+            <h3 class="maintenance-title">Monthly Maintenance: $50+/month</h3>
+            <p class="maintenance-text">Rates vary by scope. Includes hosting, security updates, backups, and technical support.</p>
+        </div>
+        <div>
+        <p class="footer-note">All prices are in USD. Custom projects and additional services available upon request.</p>
         </div>
     </section>
 
@@ -213,9 +276,9 @@
     <!-- Scroll to Top Button -->
     <div class="scroll-top" id="scroll-top">
         <i class="fas fa-arrow-up"></i>
-    </div>
-     <script>
-        // Mobile menu toggle
+    </div>  
+    <script>
+                // Mobile menu toggle
         const menuToggle = document.getElementById('menu-toggle');
         const navLinks = document.getElementById('nav-links');
         
@@ -327,6 +390,6 @@
             // Trigger skill bar animation if they're already in view
             animateSkillBars();
         });
-    </script>
+    </script> 
 </body>
 </html>
