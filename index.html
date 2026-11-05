@@ -491,5 +491,64 @@
   window.addEventListener('resize', function () { if (window.innerWidth > 768) setOpen(false); });
 })();
 </script>
+<!-- formspree-contact -->
+<script>
+(function () {
+  var ENDPOINT = 'https://formspree.io/f/mdeebdpj';
+  window.addEventListener('load', function () {
+    var old = document.querySelector('#contact form') || document.querySelector('form');
+    if (!old) return;
+    var form = old.cloneNode(true);
+    form.removeAttribute('onsubmit');
+    form.setAttribute('action', ENDPOINT);
+    form.setAttribute('method', 'POST');
+    old.parentNode.replaceChild(form, old);
+
+    var order = 0;
+    form.querySelectorAll('input, textarea, select').forEach(function (el) {
+      var type = (el.getAttribute('type') || 'text').toLowerCase();
+      if (type === 'submit' || type === 'button') return;
+      var hint = ((el.id || '') + ' ' + (el.name || '') + ' ' + (el.placeholder || '')).toLowerCase();
+      if (el.tagName === 'TEXTAREA' || hint.indexOf('message') > -1) el.name = 'message';
+      else if (type === 'email' || hint.indexOf('email') > -1) el.name = 'email';
+      else if (hint.indexOf('subject') > -1) el.name = 'subject';
+      else if (hint.indexOf('name') > -1) el.name = 'name';
+      else el.name = 'field' + order;
+      order++;
+    });
+
+    var status = document.createElement('p');
+    status.setAttribute('role', 'status');
+    status.style.marginTop = '1rem';
+    form.appendChild(status);
+
+    var btn = form.querySelector('button[type=submit], input[type=submit], button:not([type])');
+    function setBtn(text, disabled) {
+      if (!btn) return;
+      btn.disabled = disabled;
+      if (btn.tagName === 'INPUT') btn.value = text; else btn.textContent = text;
+    }
+    var original = btn ? (btn.tagName === 'INPUT' ? btn.value : btn.textContent) : '';
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      status.textContent = '';
+      setBtn('Sending...', true);
+      fetch(ENDPOINT, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+        .then(function (r) {
+          if (!r.ok) throw new Error('failed');
+          form.reset();
+          status.textContent = 'Thanks! Your message has been sent.';
+          status.style.color = '#2e9e5b';
+        })
+        .catch(function () {
+          status.textContent = 'Something went wrong. Please try again or email victorgith3@gmail.com.';
+          status.style.color = '#d64545';
+        })
+        .then(function () { setBtn(original, false); });
+    });
+  });
+})();
+</script>
 </body>
 </html>
